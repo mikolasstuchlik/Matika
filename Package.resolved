@@ -1,0 +1,124 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "gir2swift",
+        "repositoryURL": "https://github.com/mikolasstuchlik/gir2swift.git",
+        "state": {
+          "branch": "master",
+          "revision": "9cd5c8c1a259e08693d0fc1bf8bba1dfbf9c6438",
+          "version": null
+        }
+      },
+      {
+        "package": "Atk",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftAtk.git",
+        "state": {
+          "branch": "master",
+          "revision": "ca7a3fc3abb06aa1f11f109a99d4f220160ad9aa",
+          "version": null
+        }
+      },
+      {
+        "package": "Cairo",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftCairo.git",
+        "state": {
+          "branch": "master",
+          "revision": "f331eafceb26882af0ad3f7509f08f2a405fe764",
+          "version": null
+        }
+      },
+      {
+        "package": "Gdk",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGdk.git",
+        "state": {
+          "branch": "master",
+          "revision": "2ea1860c6012d902b5649ce30d28373338992406",
+          "version": null
+        }
+      },
+      {
+        "package": "GdkPixbuf",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGdkPixbuf.git",
+        "state": {
+          "branch": "master",
+          "revision": "be109e2c9f61f06c0de2825b90010c65bb83ff09",
+          "version": null
+        }
+      },
+      {
+        "package": "GIO",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGIO.git",
+        "state": {
+          "branch": "master",
+          "revision": "9a9af842ec7a78d7081ec54b76543c7513307679",
+          "version": null
+        }
+      },
+      {
+        "package": "GLib",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGLib.git",
+        "state": {
+          "branch": "master",
+          "revision": "654f973081247311b6aa8a511d3f852c6c7aa360",
+          "version": null
+        }
+      },
+      {
+        "package": "GModule",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGModule.git",
+        "state": {
+          "branch": "master",
+          "revision": "859db1000c0637e17c42945372f320b74348c99a",
+          "version": null
+        }
+      },
+      {
+        "package": "GLibObject",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGObject.git",
+        "state": {
+          "branch": "master",
+          "revision": "57c0fb58d0cdc4b3239be2411713daf7e80a7a80",
+          "version": null
+        }
+      },
+      {
+        "package": "Gtk",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGtk.git",
+        "state": {
+          "branch": "master",
+          "revision": "32151db13f7cbcb07b2638e0505ce4945e25c154",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftLibXML",
+        "repositoryURL": "https://github.com/rhx/SwiftLibXML.git",
+        "state": {
+          "branch": "master",
+          "revision": "dc6aee8a8344c443b3679a07fe3e7069bbba08b7",
+          "version": null
+        }
+      },
+      {
+        "package": "Pango",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftPango.git",
+        "state": {
+          "branch": "master",
+          "revision": "8a642e333f30989760f784d62ef9e5a32afcf750",
+          "version": null
+        }
+      },
+      {
+        "package": "PangoCairo",
+        "repositoryURL": "https://github.com/mikolasstuchlik/SwiftPangoCairo.git",
+        "state": {
+          "branch": "master",
+          "revision": "03b26a78649bf4e94b4ae766a08ea400287eb6b4",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

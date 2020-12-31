@@ -2,14 +2,23 @@ import Foundation
 import Gtk
 import GLibObject
 
+/// Base class for Widnow instance holders. WindowModel should deallocate only when the referenced Window instance is being deallocated.
 class WindowModel {
 
+    /// Weak referene to window
     @GWeak var window: WindowRef! = nil
+
+    /// Observer which keeps strong reference to `self`. This observer is disposed when window is being deallocated.
     private var observer: AnyObject? = nil
 
+    /// Initializes and shows the window. Function `make(window:)` is called by this initializer.
+    /// - Parameters window: By default, `.topLevel` window is initialized. In case the instance represents main window, pass the window as an argument.
     @discardableResult
     init(window: Window = Window(type: .toplevel)) {
+        // Creating instance of WindowRef from Window which is passed to the weak property wrapper
         self.window = .unowned(window)
+
+        // This closure captures strong reference to self which is released when window instance is deallocated.
         self.observer = window.addWeakObserver { _ in _ = self }  
         
         self.make(window: window)
@@ -23,17 +32,27 @@ class WindowModel {
         window.showAll()
     }
 
+    /// This method is called in order to fill window with widgets. This method is ment to be overriden.
     func make(window: Window) { }
+
+    /// This method is called after window is constructed immediately before `showAll()` is called. This method is ment to be overriden.
     func windowWillOpen() { }
+
+    /// This method is called when window close event raised before window closes. This method is ment to be overriden.
     func windowWillClose() { }
 
 }
 
+/// Class representing root window. 
 final class RootWindow: WindowModel {
 
+    /// Reference to state of the application.
     private let appModel = AppModel()
 
+    /// Reference to setting window (if exists)
     private var settingWindow: SettingsWindow?
+
+    // UI Elements
 
     private lazy var exerciseLabel = Label(text: "").apply { widget in
         widget.setWidthChars(nChars: 20)
@@ -88,12 +107,14 @@ final class RootWindow: WindowModel {
         updateState()
     }
 
+    /// Calling this function will look at current state of the app model and update the window to reflect the state.
     private func updateState() {
         exerciseLabel.text = appModel.currentExercise.string
         correctLabel.text = "Correct: \(appModel.numberOfCorrect)"
         incorrectLabel.text = "Failed: \(appModel.numberOfFailed)"
     }
 
+    /// Function called from inside of onClicked signal when Check button is clicked or enter was pressed. This window will pass user input to app model and update.
     private func computeEvent() {
         guard let input = Int(entry.text) else {
             return
@@ -104,6 +125,7 @@ final class RootWindow: WindowModel {
         updateState()
     }
 
+    /// This function is called from inside of onClicked signal when Settings button is clicked. If settings window is opened, main window shall be insensitive.
     private func didClickSettings() {
         guard settingWindow == nil else { return }
         window.set(sensitive: false)
@@ -117,12 +139,19 @@ final class RootWindow: WindowModel {
     }
 }
 
+/// Class representing Setting window. 
 final class SettingsWindow: WindowModel {
 
+    /// Close handler is called to inform, that window is being closed.
     private var closeHandler: ()->()
+
+    /// Update handler is called whenever app model was changed.
     private var modelUpdated: (()->())?
+
     private let appModel: AppModel
 
+    // UI Elements
+    
     private lazy var minLabel = Label(text: "Minimal value: ")
 
     private lazy var minEntry = Entry().apply { widget in 
@@ -151,6 +180,9 @@ final class SettingsWindow: WindowModel {
         }
     }
 
+    /// Custom initializer which receives reference to AppModel and two handlers.
+    /// - Parameter handler: this closure is called when window closes
+    /// - Parameter modelUpdated: this closure is called whenever app model is changed.
     init(model: AppModel, handler: @escaping ()->(), modelUpdated: (()->())? = nil) {
         self.closeHandler = handler
         self.modelUpdated = modelUpdated
@@ -177,6 +209,7 @@ final class SettingsWindow: WindowModel {
         window.add(widget: grid)
     }
 
+    /// During call of this method, intial state is set to the window.
     override func windowWillOpen() {
         super.windowWillOpen()
         minEntry.text = "\(appModel.min)"
@@ -184,12 +217,14 @@ final class SettingsWindow: WindowModel {
         checkValidity()
     }
 
+    /// This method calls close handler.
     override func windowWillClose() {
         super.windowWillClose()
 
         closeHandler()
     }
 
+    /// This method checks, whether user input is valid and apply button shall be sensitive.
     private func checkValidity() {
         if let min = Int(minEntry.text), let max = Int(maxEntry.text), min < max {
             applybutton.set(sensitive: true)
@@ -198,6 +233,7 @@ final class SettingsWindow: WindowModel {
         }
     }
 
+    /// Callback of apply button. Modifies app model and calls model update handler.
     private func applyPressed() {
         if let min = Int(minEntry.text), let max = Int(maxEntry.text), min < max {
             appModel.adjust(min: min, max: max)

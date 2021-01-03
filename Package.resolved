@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/gir2swift.git",
         "state": {
           "branch": "master",
-          "revision": "9cd5c8c1a259e08693d0fc1bf8bba1dfbf9c6438",
+          "revision": "8017b33a35c4df046f359cb2c4ea6be1a4ddc459",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftAtk.git",
         "state": {
           "branch": "master",
-          "revision": "ca7a3fc3abb06aa1f11f109a99d4f220160ad9aa",
+          "revision": "bade23382be9096c9e067eb74225d82871ceac0b",
           "version": null
         }
       },
@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftCairo.git",
         "state": {
           "branch": "master",
-          "revision": "f331eafceb26882af0ad3f7509f08f2a405fe764",
+          "revision": "8f6916a90f893b66a5deb97f528649ddfaa6cc0d",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGdk.git",
         "state": {
           "branch": "master",
-          "revision": "2ea1860c6012d902b5649ce30d28373338992406",
+          "revision": "1def8a60dda5707eddc63fc381ba69678a10dad7",
           "version": null
         }
       },
@@ -42,7 +42,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGdkPixbuf.git",
         "state": {
           "branch": "master",
-          "revision": "be109e2c9f61f06c0de2825b90010c65bb83ff09",
+          "revision": "d3b5b2b4414b11b9334eadce85997bf43daed3a1",
           "version": null
         }
       },
@@ -51,7 +51,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGIO.git",
         "state": {
           "branch": "master",
-          "revision": "9a9af842ec7a78d7081ec54b76543c7513307679",
+          "revision": "545830df62b2ca41141bcf25524b2f5a23daa04e",
           "version": null
         }
       },
@@ -60,7 +60,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGLib.git",
         "state": {
           "branch": "master",
-          "revision": "654f973081247311b6aa8a511d3f852c6c7aa360",
+          "revision": "355049d524b8d2d57eb1403fd60105bc9d31c003",
           "version": null
         }
       },
@@ -69,7 +69,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGModule.git",
         "state": {
           "branch": "master",
-          "revision": "859db1000c0637e17c42945372f320b74348c99a",
+          "revision": "29484b59e3585bb1f5df0207627fa21628ac093a",
           "version": null
         }
       },
@@ -78,7 +78,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGObject.git",
         "state": {
           "branch": "master",
-          "revision": "57c0fb58d0cdc4b3239be2411713daf7e80a7a80",
+          "revision": "7bad64062a74e6dc104a4b9355a4122eca750c13",
           "version": null
         }
       },
@@ -87,7 +87,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftGtk.git",
         "state": {
           "branch": "master",
-          "revision": "32151db13f7cbcb07b2638e0505ce4945e25c154",
+          "revision": "0e97fc02dd749cc7fab9e6103035feda07a32d56",
           "version": null
         }
       },
@@ -105,7 +105,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftPango.git",
         "state": {
           "branch": "master",
-          "revision": "8a642e333f30989760f784d62ef9e5a32afcf750",
+          "revision": "102483de3e017a5f08e1458c7d5451f05d413b13",
           "version": null
         }
       },
@@ -114,7 +114,7 @@
         "repositoryURL": "https://github.com/mikolasstuchlik/SwiftPangoCairo.git",
         "state": {
           "branch": "master",
-          "revision": "03b26a78649bf4e94b4ae766a08ea400287eb6b4",
+          "revision": "e937bccece4215e6f63919526ec6bd6e11b94a32",
           "version": null
         }
       }

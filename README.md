@@ -26,7 +26,7 @@ swift run
 ### macOS Big Sur
 The supported version of Xcode is 12.2.
 
-First you need to install prerequisities. On macOS 11 you can do so using `apt`:
+First you need to install prerequisities. On macOS 11 you can do so using `brew`:
 
 ```bash
 brew install glib gobject-introspection pango atk gtk+3 cairo glib-networking gdk-pixbuf

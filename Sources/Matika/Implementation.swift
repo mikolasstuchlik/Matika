@@ -6,7 +6,7 @@ import GLibObject
 class WindowModel {
 
     /// Weak referene to window
-    @GWeak var window: WindowRef! = nil
+    @GWeak var window: Gtk.WindowRef! = nil
 
     /// Observer which keeps strong reference to `self`. This observer is disposed when window is being deallocated.
     private var observer: AnyObject? = nil

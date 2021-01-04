@@ -66,7 +66,7 @@ final class AppModel {
         let lhs = (min...max).randomElement() ?? min
         let rhs = (min...max).randomElement() ?? max
 
-        if rand() % 2 == 0 {
+        if Bool.random() {
             return .addition(lhs: lhs, rhs: rhs, userInput: nil)
         } else {
             return .substraction(lhs: lhs, rhs: rhs, userInput: nil)

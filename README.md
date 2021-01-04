@@ -6,6 +6,7 @@ Matika is a real-world example of simple application that could be built using S
 
 ## Building
 
+### Ubuntu 20.04 LTS
 First you need to install prerequisities. On Ubuntu 20.04 you can do so using `apt`:
 
 ```bash
@@ -21,6 +22,24 @@ This script will trigger dependency fetch, compiles the code generator and runs 
 Then you can build & run the application using SPM:
 ```bash
 swift run
+```
+### macOS Big Sur
+The supported version of Xcode is 12.2.
+
+First you need to install prerequisities. On macOS 11 you can do so using `apt`:
+
+```bash
+brew install glib gobject-introspection pango atk gtk+3 cairo glib-networking gdk-pixbuf
+```
+Since SwiftGtk takes advantage of generated code, you need to run generator first. For that purpose, you can use `run-gir2swift.sh`.
+```bash
+./run-gir2swift.sh
+```
+This script will trigger dependency fetch, compiles the code generator and runs it.
+
+Then you can build & run the application using SPM. At the time of writing, there is a bug in SPM which may be resolved in Swift 5.4. As a fix, you need to append your build commands by ``./run-gir2swift.sh flags -noUpdate`` which will scan your project and provide compiler and linker with appropriate configuration.
+```bash
+swift run `./run-gir2swift.sh flags -noUpdate`
 ```
 
 <!-- 
